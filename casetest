@@ -1,0 +1,19 @@
+echo "Please enter a group name: \c"
+read gname
+
+case $gname in 
+         hiti)
+            no_albums=12
+            last_album="Let it be"
+   ;;
+         moni)
+     no_albums=7
+      last_album="On every street"
+;;
+          shruti)
+           no_albums=6
+           last_album="My life"
+;;
+esac
+
+echo $gname made $no_albums album. The last one was called \"$last_album\"
