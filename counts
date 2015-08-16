@@ -1,0 +1,9 @@
+e:cho "Number of possible users on the system: \c"
+cat /etc/passwd | wc -l
+echo
+echo "Number of user logged onto the system: \c"
+who | wc -l
+echo
+echo "Total number of processes running:    \c"
+ps -e | wc -l
+

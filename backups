@@ -1,0 +1,86 @@
+#!/bin/sh
+#
+# 
+#
+
+fname=names.dat
+
+#
+#      Read in the contact details from the keyboard
+#
+[ ! -f $fname ] && > $fname
+
+#
+#   Display the menu
+#
+clear
+echo "               SHELL PROGRAMMING DATABASE            "
+echo "                       MAIN MENU                     "
+echo " What do you wish to do? "
+echo "1.  create records"
+echo "2.  View records"
+echo "3.  Search for the records"
+echo "4.  Delete records that match a pattern"
+echo
+
+#
+#   prompt for an answer
+#
+echo "Answer? \c"
+read ans junk
+
+#
+#    Decide what to do
+#
+case "$ans" in
+     1)
+#
+#  Read in the contact details from the keyboard
+#
+echo "Please enterr the following contact details:"
+echo
+echo "Given name: \c"
+read name
+echo "given surname: \c "
+read surname
+echo "Current Address: \c"
+read Address
+echo "city: \c"
+read city
+echo "state: \c"
+read state
+echo "zip: \c"
+read zip
+#####################################################
+#            The details appends to the one file
+###################################################
+
+echo $name:$surname:$Address:$city:$state:$zip >> $fname
+;;
+2)
+#
+#    Show whats currently in the file
+#
+(
+echo
+echo Here are the current details in the contact database:
+echo
+cat $fname
+) | more
+
+#
+#    And display how many there are 
+#
+echo 
+echo Ther are `cat $fname | wc -l` contacts in the database
+;;
+3)
+echo the search is not implement yet
+;;
+4)
+echo the delete case is not imlpement yet
+;;
+*)
+echo "That was an invalid choice^G"
+;;
+esac

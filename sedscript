@@ -1,0 +1,6 @@
+#!/bin/sed -f
+#
+#           This script will be run using the sed program
+#
+ s/month/mahina/
+ /july/d

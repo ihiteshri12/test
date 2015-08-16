@@ -1,0 +1,9 @@
+backup_these_files()
+{
+for rname
+      do
+          cp $fname /backup
+          echo $fname has been backed up
+      done
+}
+backup_these_files *.dat

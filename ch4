@@ -1,0 +1,6 @@
+var1=Fred
+echo $var1
+var2="Fred smith"
+echo $var2
+var3="That's Life"
+echo $var3

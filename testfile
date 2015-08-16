@@ -1,0 +1,13 @@
+echo "Please enter filename: \c"
+read fname
+
+if [-z "$fname" ]
+then
+      echo You did not enter a filename
+elif [ -f "$fname" -a -w "$fname" ]
+then
+echo Evrything is fine
+else 
+echo The file is not writable file
+fi
+

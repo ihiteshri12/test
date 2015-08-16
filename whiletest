@@ -1,0 +1,11 @@
+echo "Please enter the name of the directory: \c"
+read dir
+while [ ! -d "$dir" ]
+do 
+    echo "$dir is not a directory"
+    echo "Please try again: \c"
+    read dir
+done
+
+echo congradulation: $dir is a directory!
+

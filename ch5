@@ -1,0 +1,10 @@
+retirement_age=65
+
+echo "Please enter your age: \c"
+read age
+if [ $age -gt $retirement_age ]
+then 
+echo You are too old. you should be retired.
+else
+echo you are still you to work.
+fi
