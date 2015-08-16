@@ -1,0 +1,10 @@
+echo "please enter your name: \c"
+read name
+echo name: $name > chiku.sh
+echo "please enter your address: \c"
+read address
+echo address: $address >> chiku.sh
+echo "please enter your phone: \c"
+read phone
+echo phone: $phone >> chiku.sh
+echo hye!! you hava been entered successfully..!! >> chiku.sh
