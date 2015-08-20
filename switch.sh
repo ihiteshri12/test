@@ -3,8 +3,8 @@
 if test $# = 3
 then
   case $2 in 
-  +) let z=$1+$2;;
-  -) let z=$1-$2;;
+  +) let z=$1+$3;;
+  -) let z=$1-$3;;
   /) let z=$1/$3;;
  x|X) let z=$1*$3;;
   *) echo warning - $2 invalid operator, onlt above operators allowed

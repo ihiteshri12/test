@@ -16,6 +16,7 @@ do
   for (( j=$i;j<=4;j++ ))
 do
 if [ ${nos[$i]} -gt ${nos[$j]} ]
+then
   t=${nos[$i]}
   nos[$i]=${nos[$j]}
   nos[$j]=$t
