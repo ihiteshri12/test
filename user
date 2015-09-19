@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# declear the array
+a=({"07122015010101":"G G Nagarkar"}, {"02122015010101": "Hiteshri Ramteke"}, {"07122015010101": "G G Nagarkar"} , {"01122015010101": "shruti ramteke"},{"04122015010101": "lucy white"},{"03122015010101": "chetna ramteke"},{"01122015010101": "shruti ramteke"} ,{"09122015010101": "tini borkar"}, {"03122015010101": "dolly ramteke"},{"05122015010101": "chetna ramteke"},{"08122015010101":  "monika raj"},{"10122015010101": "arya stark"},{"09122015010101": "tini borkar"},{"06122015130101": "akira bedi"},{"11122015020113": "mahira khan"},{"03122015010101": "chetna ramteke"},{"08122015010101": "monika raj"},{"12122015015326": "jarun sayeed"},{"10122015031529": "lola barathian"})
+
+
+# print unsorted array
+echo "print the informaton"
+for ((i=0;i<18;i++))
+do
+echo ${a[$i]}
+done
+
+# sort numnber
+echo "sorted number"
+for ((i=0;i<=18;i++))
+do
+ for ((j=$i;j<=18;j++))
+do
+if [ ${a[$i]} -gt ${a[$j]} ]
+then
+    t=${a[$i]}
+     a[$i]=${a[$j]}
+     a[$j]=$t
+fi
+done
+done
+
+# print the sorted number
+echo -e "\n sorted number in ascending array"
+for ((i=0;i<=18;i++))
+do
+echo ${a[$i]}
+done
+
+
+
+
+
