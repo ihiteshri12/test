@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# declear the array
+
+a=(07122015010101:GG 02122015010101:Hiteshri 07122015010101:GG 01122015010101:shruti 04122015010101:lucy 03122015010101:chetna 01122015010101:shruti 09122015010101:tini 03122015010101:dolly 05122015010101:chetna 08122015010101:monika 10122015010101:arya 09122015010101:tini 06122015130101:akira 11122015020113:mahira 03122015010101:chetna 08122015010101:monika 12122015015326:jaarun 10122015031529:lola)
+
+
+# print unsorted array
+echo "print the informaton"
+for (( i=0; i <= 18; i++ ))
+do
+echo "${a[$i]}"
+done
+
+# sorting an array
+
+b=$(echo "${a[*]}" | tr ' ' '\n' | sort -u | tr '\n' ' ')
+
+#echo $b
+
+
+echo "enter the number of last logged in users:"
+# take an input
+read c
+
+# loop for the last number of user
+
+echo " Last $c logged in users:"
+for (( j=13 ; j >= `expr 14 - $c` ; j-- ))
+do
+echo ${b[$j]}
+done 
