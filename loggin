@@ -1,5 +1,0 @@
-echo "enter user name"
-read name
-
-if [ $name == a[] ]
-
